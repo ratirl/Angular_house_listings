@@ -8,3 +8,5 @@ ng version ; which angular cli version
 ng serve ; starts a local development server usually at 'http://localhost:4200/'
 ng generate component home ; creating a new component called home
 
+interfaces in angular are custom data types for the application (basically like classes in cpp)
+ng generate interface housinglocation ; command for above
