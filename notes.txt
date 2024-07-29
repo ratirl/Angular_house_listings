@@ -10,3 +10,7 @@ ng generate component home ; creating a new component called home
 
 interfaces in angular are custom data types for the application (basically like classes in cpp)
 ng generate interface housinglocation ; command for above
+
+@Input() housingLocation!: HousingLocation; 
+the code above and Input() in general, allows components to share data
+
