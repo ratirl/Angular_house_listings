@@ -1,0 +1,8 @@
+# Notes for myself during development
+
+Angular? Web framework that allows teams to deliver powerful and scalable apps with confidence.
+Why angular? Focus on tools and productivity 
+
+# CMD commands
+ng version ; which angular cli version
+ng serve ; starts a local development server usually at 'http://localhost:4200/'
