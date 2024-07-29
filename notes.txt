@@ -6,3 +6,5 @@ Why angular? Focus on tools and productivity
 # CMD commands
 ng version ; which angular cli version
 ng serve ; starts a local development server usually at 'http://localhost:4200/'
+ng generate component home ; creating a new component called home
+
