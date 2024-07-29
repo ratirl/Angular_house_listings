@@ -17,3 +17,8 @@ the code above and Input() in general, allows components to share data
 When adding a property binding to a component tag, we use the [attribute] = "value" syntax to notify Angular that the assigned value should be treated as a property from the component class and not a string value.
 
 The value on the right-hand side is the name of the property from the HomeComponent.
+
+tldr passing data to components and displaying/interpolating them in child template;;;
+    in parent component in the export declare an object from the interface
+    in the child component use @Input to catch the object and use it freely in ur template using {{ obj.propertyName}}
+
