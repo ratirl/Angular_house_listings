@@ -14,3 +14,6 @@ ng generate interface housinglocation ; command for above
 @Input() housingLocation!: HousingLocation; 
 the code above and Input() in general, allows components to share data
 
+When adding a property binding to a component tag, we use the [attribute] = "value" syntax to notify Angular that the assigned value should be treated as a property from the component class and not a string value.
+
+The value on the right-hand side is the name of the property from the HomeComponent.
