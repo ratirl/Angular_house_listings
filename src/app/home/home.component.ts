@@ -1,7 +1,8 @@
-import { Component } from "@angular/core";
+import { Component , inject} from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { HousingLocationComponent } from "../housing-location/housing-location.component";
 import { HousingLocation } from "../housinglocation";
+import {HousingService} from '../housing.service';
 @Component({
   selector: "app-home",
   standalone: true,
@@ -24,6 +25,17 @@ import { HousingLocation } from "../housinglocation";
 })
 export class HomeComponent {
   readonly baseUrl = "https://angular.dev/assets/images/tutorials/common";
+
+  // INJECTING THE DATA FROM THE SERVICE IN THE ARRAY
+  // AND IT INITIALIZES DURING THE CONSTRUCTOR BUILDING
+  housingLocationList: HousingLocation[] = [];
+  housingService: HousingService = inject(HousingService);
+
+  constructor() {
+    this.housingLocationList = this.housingService.getAllHousingLocations();
+  }
+
+  // ONE LOCALLY DEFINED OBJ
   /* housingLocation: HousingLocation = {
     id: 9999,
     name: 'Test Home',
@@ -34,9 +46,9 @@ export class HomeComponent {
     wifi: true,
     laundry: false,
   }; */
-  // the above was good if you only want to pass around one house obj, but below we pass more so in an array
 
-  housingLocationList: HousingLocation[] = [
+  // MULTIPLE LOCALLY DEFINED OBJS IN AN ARRAY
+  /* housingLocationList: HousingLocation[] = [
     {
       id: 0,
       name: "Acme Fresh Start Housing",
@@ -137,5 +149,5 @@ export class HomeComponent {
       wifi: true,
       laundry: true,
     },
-  ];
+  ]; */
 }
