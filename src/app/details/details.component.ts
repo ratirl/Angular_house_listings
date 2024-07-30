@@ -56,10 +56,12 @@ export class DetailsComponent {
 
   constructor() {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    console.log('Housing Location ID:', housingLocationId);
     this.housingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
       this.housingLocation = housingLocation;
     });
   }
+  
   submitApplication() {
     this.housingService.submitApplication(
       this.applyForm.value.firstName ?? '',
